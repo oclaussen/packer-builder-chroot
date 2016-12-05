@@ -1,0 +1,137 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "cdOCt0Yb+hdErz8NAQqayxPmRsY=",
+			"origin": "github.com/mitchellh/packer/vendor/github.com/hashicorp/errwrap",
+			"path": "github.com/hashicorp/errwrap",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "lrSl49G23l6NhfilxPM0XFs5rZo=",
+			"origin": "github.com/mitchellh/packer/vendor/github.com/hashicorp/go-multierror",
+			"path": "github.com/hashicorp/go-multierror",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "9nNGCY0dWyRDEm7xb57BzV0AKeA=",
+			"origin": "github.com/mitchellh/packer/vendor/github.com/hashicorp/go-version",
+			"path": "github.com/hashicorp/go-version",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "Gm2k+46HxKqsjI8lCWBp/jRaPrM=",
+			"origin": "github.com/mitchellh/packer/vendor/github.com/hashicorp/yamux",
+			"path": "github.com/hashicorp/yamux",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "mVqDwKcibat0IKAdzAhfGIHPwI8=",
+			"origin": "github.com/mitchellh/packer/vendor/github.com/mitchellh/go-fs",
+			"path": "github.com/mitchellh/go-fs",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "B5dy+Lg6jFPgHYhozztz88z3b4A=",
+			"origin": "github.com/mitchellh/packer/vendor/github.com/mitchellh/go-fs/fat",
+			"path": "github.com/mitchellh/go-fs/fat",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "v9y1OJ6NpBUhK4U8V4mmYUFBU4Q=",
+			"origin": "github.com/mitchellh/packer/vendor/github.com/mitchellh/iochan",
+			"path": "github.com/mitchellh/iochan",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "4Js6Jlu93Wa0o6Kjt393L9Z7diE=",
+			"origin": "github.com/mitchellh/packer/vendor/github.com/mitchellh/mapstructure",
+			"path": "github.com/mitchellh/mapstructure",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "9Vh2o3Vs6HzI8P04ks4kvIpegco=",
+			"path": "github.com/mitchellh/multistep",
+			"revision": "162146fc57112954184d90266f4733e900ed05a5",
+			"revisionTime": "2014-04-07T01:01:15Z"
+		},
+		{
+			"checksumSHA1": "NzuScJghfeNzqHNgpcQG/jBbzd4=",
+			"path": "github.com/mitchellh/packer/common",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "e/MV3GL8ZOpqyNSKVPtMeqTRR/w=",
+			"path": "github.com/mitchellh/packer/common/uuid",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "EQMW5Gc1bj8eo1K26SeZ9ddkCSI=",
+			"path": "github.com/mitchellh/packer/helper/config",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "21zDnbho4Sr9vjweoz6SjWeir3g=",
+			"path": "github.com/mitchellh/packer/packer",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "2JA2Po6lxejBo9qfU6fh/iBHvIg=",
+			"path": "github.com/mitchellh/packer/packer/plugin",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "78/WIN27rfT4PM6pp1IPiLXuKOE=",
+			"path": "github.com/mitchellh/packer/packer/rpc",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "5AwFRU+0GONc/fNy4763DDrG0mg=",
+			"path": "github.com/mitchellh/packer/post-processor/shell-local",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "c0Rry7E4kUZY4bmp9Z/6BVNacmU=",
+			"path": "github.com/mitchellh/packer/template",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "UJv0nzuaU1/coVmjyklYe4SwhMk=",
+			"path": "github.com/mitchellh/packer/template/interpolate",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "mrqMlK6gqe//WsJSrJ1HgkPM0lM=",
+			"origin": "github.com/mitchellh/packer/vendor/github.com/mitchellh/reflectwalk",
+			"path": "github.com/mitchellh/reflectwalk",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		},
+		{
+			"checksumSHA1": "kHoPkdkwngiWKB27/uwq+T/3qv4=",
+			"origin": "github.com/mitchellh/packer/vendor/github.com/ugorji/go/codec",
+			"path": "github.com/ugorji/go/codec",
+			"revision": "e45dd0b3949f16ddc1447f25030b3fc69cd7a137",
+			"revisionTime": "2016-11-29T02:50:57Z"
+		}
+	],
+	"rootPath": "github.com/oclaussen/packer-builder-chroot"
+}

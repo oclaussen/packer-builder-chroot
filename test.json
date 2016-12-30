@@ -4,12 +4,19 @@
       "type": "chroot",
       "image_size": "2G",
       "image_name": "packer-test.img",
+      "mount_partition": 2,
       "pre_mount_commands": [
         "sudo parted --script {{.Device}} mklabel msdos",
         "sudo parted --script {{.Device}} mkpart primary fat32 0% 100M",
         "sudo parted --script {{.Device}} mkpart primary ext4 100M 100%",
         "sudo mkfs.vfat -F32 {{.Device}}p1",
         "sudo mkfs.ext4 -F {{.Device}}p2"
+      ],
+      "post_mount_commands": [
+        "sudo mkdir {{.MountPath}}/boot",
+        "sudo mount {{.Device}}p1 {{.MountPath}}/boot",
+        "wget http://archlinuxarm.org/os/ArchLinuxArm-rpi-2-latest.tar.gz",
+        "sudo tar -xpf ArchlinuxArm-rpi-2-latest.tar.gz -C {{.MountPath}}"
       ]
     }
   ]

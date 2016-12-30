@@ -3,6 +3,7 @@ package communicator
 import (
 	"fmt"
 	"io"
+	"log"
 	"os"
 	"os/exec"
 	"syscall"
@@ -34,6 +35,8 @@ func (c *Shell) Start(cmd *packer.RemoteCmd) error {
 	localCmd.Stdin = cmd.Stdin
 	localCmd.Stdout = cmd.Stdout
 	localCmd.Stderr = cmd.Stderr
+
+	log.Printf("Executing: %s %#v", localCmd.Path, localCmd.Args)
 
 	if err := localCmd.Start(); err != nil {
 		return err

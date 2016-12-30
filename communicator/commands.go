@@ -13,8 +13,6 @@ func RunCommand(command string, state multistep.StateBag, data interface{}) (str
 	ui := state.Get("ui").(packer.Ui)
 	cmdWrapper := state.Get("wrappedCommand").(CommandWrapper)
 
-	ui.Say(fmt.Sprintf("Executing command: %s", command))
-
 	stdout := new(bytes.Buffer)
 	stderr := new(bytes.Buffer)
 	comm := &Shell{

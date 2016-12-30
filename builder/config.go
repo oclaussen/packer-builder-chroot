@@ -64,7 +64,10 @@ func NewConfig(raws ...interface{}) (*Config, []string, error) {
 	}
 
 	if len(c.CopyFiles) == 0 {
-		c.CopyFiles = []string{"/etc/resolv.conf"}
+		c.CopyFiles = []string{
+			"/etc/resolv.conf",
+			"/usr/bin/qemu-arm-static",
+		}
 	}
 
 	if c.CommandWrapper == "" {

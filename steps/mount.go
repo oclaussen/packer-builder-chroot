@@ -29,6 +29,10 @@ func (s *Mount) Run(state multistep.StateBag) multistep.StepAction {
 	ui := state.Get("ui").(packer.Ui)
 	device := state.Get("device").(string)
 
+	if s.MountPartition > 0 {
+		device = fmt.Sprintf("%sp%d", device, s.MountPartition)
+	}
+
 	data := &mountPathData{Device: filepath.Base(device)}
 
 	mountPath, err := interpolate.Render(s.MountPath, &interpolate.Context{Data: data})

@@ -40,18 +40,13 @@ func (c *Chroot) Start(cmd *packer.RemoteCmd) error {
 		if err := localCmd.Wait(); err != nil {
 			if exitErr, ok := err.(*exec.ExitError); ok {
 				exitStatus = 1
-
-				// There is no process-independent way to get the REAL
-				// exit status so we just try to go deeper.
 				if status, ok := exitErr.Sys().(syscall.WaitStatus); ok {
 					exitStatus = status.ExitStatus()
 				}
 			}
 		}
 
-		log.Printf(
-			"Chroot execution exited with '%d': '%s'",
-			exitStatus, cmd.Command)
+		log.Printf("Chroot execution exited with '%d': '%s'", exitStatus, cmd.Command)
 		cmd.SetExited(exitStatus)
 	}()
 

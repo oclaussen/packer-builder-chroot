@@ -16,8 +16,8 @@
         ["2", "/boot"]
       ],
       "post_mount_commands": [
-        "wget http://archlinuxarm.org/os/ArchLinuxARM-rpi-2-latest.tar.gz",
-        "tar -xpf ArchlinuxArm-rpi-2-latest.tar.gz -C {{.MountPath}}"
+        "wget -q http://archlinuxarm.org/os/ArchLinuxARM-rpi-2-latest.tar.gz",
+        "tar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C {{.MountPath}}"
       ]
     }
   ]

@@ -9,22 +9,15 @@ import (
 	"syscall"
 
 	"github.com/mitchellh/packer/packer"
-	"github.com/mitchellh/packer/template/interpolate"
 )
 
 type Shell struct{
 	CmdWrapper CommandWrapper
-	Data       interface{}
 }
 
 func (c *Shell) Start(cmd *packer.RemoteCmd) error {
 	var err error
 	command := cmd.Command
-
-	command, err = interpolate.Render(command, &interpolate.Context{Data: c.Data})
-	if err != nil {
-		return fmt.Errorf("Error interpolating: %s", err)
-	}
 
 	command, err = c.CmdWrapper(command)
 	if err != nil {

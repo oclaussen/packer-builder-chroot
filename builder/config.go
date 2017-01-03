@@ -18,7 +18,7 @@ type Config struct {
 	CommandWrapper    string     `mapstructure:"command_wrapper"`
 	CopyFiles         []string   `mapstructure:"copy_files"`
 	MountOptions      []string   `mapstructure:"mount_options"`
-	MountPartition    int        `mapstructure:"mount_partition"`
+	MountPartitions   [][]string `mapstructure:"mount_partitions"`
 	MountPath         string     `mapstructure:"mount_path"`
 	PostMountCommands []string   `mapstructure:"post_mount_commands"`
 	PreMountCommands  []string   `mapstructure:"pre_mount_commands"`
@@ -78,8 +78,10 @@ func NewConfig(raws ...interface{}) (*Config, []string, error) {
 		c.MountPath = "packer-chroot-volumes/{{.Device}}"
 	}
 
-	if c.MountPartition == 0 {
-		c.MountPartition = 1
+	if len(c.MountPartitions) == 0 {
+		c.MountPartitions = [][]string{
+			{"1", "/"},
+		}
 	}
 
 	var errs *packer.MultiError

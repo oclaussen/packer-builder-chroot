@@ -59,9 +59,9 @@ func (b *Builder) Run(ui packer.Ui, hook packer.Hook, cache packer.Cache) (packe
 			Commands: b.config.PreMountCommands,
 		},
 		&steps.Mount{
-			MountOptions:   b.config.MountOptions,
-			MountPartition: b.config.MountPartition,
-			MountPath:      b.config.MountPath,
+			MountPath:       b.config.MountPath,
+			MountOptions:    b.config.MountOptions,
+			MountPartitions: b.config.MountPartitions,
 		},
 		&steps.PostMount{
 			Commands: b.config.PostMountCommands,

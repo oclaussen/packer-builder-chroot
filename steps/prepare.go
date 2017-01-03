@@ -37,7 +37,7 @@ func (s *Prepare) Run(state multistep.StateBag) multistep.StepAction {
 
 	ui.Say("Creating the loopback device...")
 
-	setupCommand := fmt.Sprintf("sudo losetup --find --show %s", image)
+	setupCommand := fmt.Sprintf("losetup --find --show %s", image)
 	device, err := communicator.RunCommand(setupCommand, state, nil)
 	if err != nil {
 		return multistep.ActionHalt
@@ -56,7 +56,7 @@ func (s *Prepare) Cleanup(state multistep.StateBag) {
 	}
 
 	ui.Say("Detaching the loopback device...")
-	detachCommand := fmt.Sprintf("sudo losetup --detach %s", s.device)
+	detachCommand := fmt.Sprintf("losetup --detach %s", s.device)
 	if _, err := communicator.RunCommand(detachCommand, state, nil); err != nil {
 		return
 	}

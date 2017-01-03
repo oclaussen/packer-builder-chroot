@@ -37,7 +37,7 @@ func (s *MountExtra) Run(state multistep.StateBag) multistep.StepAction {
 		}
 
 		ui.Message(fmt.Sprintf("Mounting: %s", mountInfo[2]))
-		mountCommand := fmt.Sprintf("sudo mount %s %s %s", flags, mountInfo[1], innerPath)
+		mountCommand := fmt.Sprintf("mount %s %s %s", flags, mountInfo[1], innerPath)
 		if _, err := communicator.RunCommand(mountCommand, state, nil); err != nil {
 			return multistep.ActionHalt
 		}
@@ -63,7 +63,7 @@ func (s *MountExtra) Cleanup(state multistep.StateBag) {
 			continue;
 		}
 
-		umountCommand := fmt.Sprintf("sudo umount %s", path)
+		umountCommand := fmt.Sprintf("umount %s", path)
 		if _, err := communicator.RunCommand(umountCommand, state, nil); err != nil {
 			return
 		}

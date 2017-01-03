@@ -75,7 +75,7 @@ func NewConfig(raws ...interface{}) (*Config, []string, error) {
 	}
 
 	if c.MountPath == "" {
-		c.MountPath = "packer-chroot-volumes/{{.Device}}"
+		c.MountPath = "/mnt/packer-chroot-volumes/{{.Device}}"
 	}
 
 	if len(c.MountPartitions) == 0 {

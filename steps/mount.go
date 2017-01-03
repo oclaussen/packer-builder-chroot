@@ -65,7 +65,7 @@ func (s *Mount) Run(state multistep.StateBag) multistep.StepAction {
 			opts = "-o " + strings.Join(s.MountOptions, " -o ")
 		}
 
-		mountCommand := fmt.Sprintf("sudo mount %s %sp%s %s", opts, device, mountInfo[0], innerPath)
+		mountCommand := fmt.Sprintf("mount %s %sp%s %s", opts, device, mountInfo[0], innerPath)
 		if _, err := communicator.RunCommand(mountCommand, state, data); err != nil {
 			return multistep.ActionHalt
 		}
@@ -92,7 +92,7 @@ func (s *Mount) Cleanup(state multistep.StateBag) {
 			continue;
 		}
 
-		umountCommand := fmt.Sprintf("sudo umount %s", path)
+		umountCommand := fmt.Sprintf("umount %s", path)
 		if _, err := communicator.RunCommand(umountCommand, state, nil); err != nil {
 			return
 		}

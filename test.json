@@ -12,8 +12,8 @@
         "mkfs.ext4 -F {{.Device}}p2"
       ],
       "mount_partitions": [
-        ["1", "/"],
-        ["2", "/boot"]
+        ["2", "/"],
+        ["1", "/boot"]
       ],
       "post_mount_commands": [
         "wget -q http://archlinuxarm.org/os/ArchLinuxARM-rpi-2-latest.tar.gz",
